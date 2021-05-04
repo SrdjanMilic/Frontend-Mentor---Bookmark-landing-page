@@ -1,0 +1,28 @@
+//  Foundation for Sites Variables
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Colors
+//   2. Breakpoints
+
+// 1. Colors
+// .........
+
+$primary-colors: (
+  soft-blue: hsl(231, 69%, 60%),
+  soft-red:  hsl(0, 94%, 66%)
+);
+
+$neutral-colors: (
+  grsyish-blue: hsl(229, 8%, 60%),
+  very-dark-blue: hsl(0, 94%, 66%)
+);
+
+// 2. Breakpoints
+// ..............
+
+$breakpoints: (
+  'small': ('max-width': 375px),
+  'xxlarge': ('max-width': 1440px)
+);
