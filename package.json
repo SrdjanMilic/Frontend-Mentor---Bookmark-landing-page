@@ -1,0 +1,30 @@
+{
+  "name": "bookmark-landing-page-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass --watch scss/main.scss -o css",
+    "compile": "node-sass scss/main.scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrdjanMilic/Bookmark-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SrdjanMilic/Bookmark-landing-page/issues"
+  },
+  "homepage": "https://github.com/SrdjanMilic/Bookmark-landing-page#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "node-sass": "^5.0.0"
+  }
+}
