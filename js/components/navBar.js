@@ -1,5 +1,5 @@
-const template = document.createElement('template');
-template.innerHTML = `
+const NAV_BAR_TEMPLATE = document.createElement('template');
+NAV_BAR_TEMPLATE.innerHTML = `
   <style>
     a,
     a:-webkit-any-link {
@@ -13,7 +13,7 @@ template.innerHTML = `
     }
     
     :host-context(.header) a {
-      color: #2c2748;
+      color: #252b46;
     }
     
     :host-context(.footer) {
@@ -40,22 +40,21 @@ template.innerHTML = `
   </style>
 
   <img class="nav-bar__logo" />
-  <div class="nav-bar__links">
-    <ul class="nav-bar__list">
-      <li class="nav-bar__item">
-        <a href="#">Components</a>
-      </li>
-      <li class="nav-bar__item">
-        <a href="#">Features</a>
-      </li>
-      <li class="nav-bar__item">
-        <a href="#">Pricing</a>
-      </li>
-      <li class="nav-bar__item">
-        <a href="#">Contact</a>
-      </li>
-    </ul>
-  </div>
+  
+  <ul class="nav-bar__list">
+    <li class="nav-bar__item">
+      <a href="#">Components</a>
+    </li>
+    <li class="nav-bar__item">
+      <a href="#">Features</a>
+    </li>
+    <li class="nav-bar__item">
+      <a href="#">Pricing</a>
+    </li>
+    <li class="nav-bar__item">
+      <a href="#">Contact</a>
+    </li>
+  </ul>
 `;
 
 class NavBar extends HTMLElement {
@@ -63,7 +62,7 @@ class NavBar extends HTMLElement {
     super();
 
     this.attachShadow({ mode: 'open' });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.appendChild(NAV_BAR_TEMPLATE.content.cloneNode(true));
 
     this.shadowRoot.querySelector('.nav-bar__logo').src = this.getAttribute('logo');
   }
