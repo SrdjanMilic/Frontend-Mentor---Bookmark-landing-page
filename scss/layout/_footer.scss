@@ -1,0 +1,13 @@
+.footer {
+  background-color: #2c2748;
+}
+
+.footer__container {
+  justify-content: space-between;
+}
+
+.footer__container__social-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
