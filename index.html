@@ -7,19 +7,37 @@
   <title>Frontend Mentor | Bookmark landing page</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/components/navBar.js"></script>
 </head>
 
 <body>
-  <header>
-
+  <header class="header">
+    <div class="header__container">
+      <div class="header__container__nav-bar-component">
+        <nav-bar logo="img/logo-bookmark-dark.svg"/>
+      </div>
+      <button>Test</button>
+    </div>
   </header>
 
   <main>
-
   </main>
 
-  <footer>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__container__nav-bar-component">
+        <nav-bar logo="img/logo-bookmark-light.svg"/>
+      </div>
 
+      <div class="footer__container__social-links">
+        <a href="#">
+          <img src="img/icon-facebook.svg" alt="Facebook">
+        </a>
+        <a href="#">
+          <img src="img/icon-twitter.svg" alt="twitter">
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 
