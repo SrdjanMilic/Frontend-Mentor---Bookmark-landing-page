@@ -5,24 +5,27 @@
 //
 //   1. Colors
 //   2. Breakpoints
+//   3. Fonts
 
 // 1. Colors
 // .........
 
-$primary-colors: (
-  soft-blue: hsl(231, 69%, 60%),
-  soft-red:  hsl(0, 94%, 66%)
-);
+// Neutral Colors
+$grayish-blue: hsl(229, 8%, 60%);
+$very-dark-blue: hsl(0, 94%, 66%);
 
-$neutral-colors: (
-  grsyish-blue: hsl(229, 8%, 60%),
-  very-dark-blue: hsl(0, 94%, 66%)
-);
+// Primary Colors
+$soft-blue: hsl(231, 69%, 60%);
+$soft-red:  hsl(0, 94%, 66%);
 
 // 2. Breakpoints
 // ..............
 
-$breakpoints: (
-  'small': ('max-width': 375px),
-  'xxlarge': ('max-width': 1440px)
-);
+$small: 375px;
+$xxlarge: 1440px;
+
+// 3. Fonts
+// ........
+
+$global-font-size: 18px;
+$global-font-color: #2c2748;
