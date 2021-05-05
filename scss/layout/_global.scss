@@ -1,4 +1,23 @@
 body {
   font-family: 'Rubik', sans-serif;
   font-size: $global-font-size;
+  color: $global-font-color;
+}
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1.7rem 0;
+}
+
+.header__container,
+.footer__container {
+  display: flex;
+  align-items: center;
+  width: $xxlarge;
+  max-width: $xxlarge;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
 }
