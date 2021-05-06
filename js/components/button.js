@@ -15,6 +15,10 @@ BUTTON_TEMPLATE.innerHTML = `
       background-color: hsl(0, 94%, 66%);
     }
     
+    :host-context(.newsletter__wrapper) .btn {
+      background-color: hsl(0, 94%, 66%);
+    }
+    
     .btn__text {
       white-space: nowrap;
       padding: 15px 20px;

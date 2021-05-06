@@ -23,6 +23,7 @@
     <a href="#">
       <custom-button text="Login"/>
     </a>
+    <img src="img/icon-hamburger.svg" alt="Menu" class="header__hamburger-menu">
   </div>
 </header>
 
@@ -49,7 +50,8 @@
     </div>
     <img src="img/illustration-hero.svg" alt="A Simple Bookmark Manager">
   </div>
-  <div class="features text-block-center">
+
+  <div class="text-block-features text-block-center">
     <text-block heading="Features"
                 paragraph="Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."/>
   </div>
@@ -57,13 +59,13 @@
   <div class="tabs">
     <ul class="tabs__list">
       <li class="tabs__item tabs__item--active" data-tab-target="#simple-bookmarking" >
-        Simple Bookmarking
+        <span class="tabs__text">Simple Bookmarking</span>
       </li>
       <li class="tabs__item" data-tab-target="#speedy-searching" >
-        Speedy Searching
+        <span class="tabs__text">Speedy Searching</span>
       </li>
       <li class="tabs__item" data-tab-target="#easy-sharing" >
-        Easy Sharing
+        <span class="tabs__text">Easy Sharing</span>
       </li>
     </ul>
   </div>
@@ -112,7 +114,116 @@
       </div>
     </div>
   </div>
+
+  <div class="text-block-download text-block-center">
+    <text-block heading="Download the extension"
+                paragraph="We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize."/>
+  </div>
+
+  <div class="cards">
+    <div class="cards__chrome">
+      <img src="img/logo-chrome.svg" class="cards__logo" alt="Download Chrome">
+      <h3>Add To Chrome</h3>
+      <p>Minimun version 62</p>
+      <img class="cards__dotted-line" src="img/bg-dots.svg" alt="Dotted line">
+      <a href="#">
+        <custom-button text="Add & Install Extension"/>
+      </a>
+    </div>
+    <div class="cards__firefox">
+      <img src="img/logo-firefox.svg" class="cards__logo" alt="Download Firefox">
+      <h3>Add To Firefox</h3>
+      <p>Minimun version 62</p>
+      <img class="cards__dotted-line" src="img/bg-dots.svg" alt="Dotted line">
+      <a href="#">
+        <custom-button text="Add & Install Extension"/>
+      </a>
+    </div>
+    <div class="cards__opera">
+      <img src="img/logo-opera.svg" class="cards__logo" alt="Download Opera">
+      <h3>Add To Chrome</h3>
+      <p>Minimun version 62</p>
+      <img class="cards__dotted-line" src="img/bg-dots.svg" alt="Dotted line">
+      <a href="#">
+        <custom-button text="Add & Install Extension"/>
+      </a>
+    </div>
+  </div>
+
+  <div class="text-block-faq text-block-center">
+    <text-block heading="Frequently Asked Questions"
+                paragraph="Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us."/>
+  </div>
+
+  <div class="accordion">
+    <ul class="accordion__list" data-accordion>
+      <li class="accordion__item" data-accordion-item>
+        <div class="accordion__title">
+          <span>What is Bookmark?</span>
+          <img src="img/icon-arrow.svg" alt="Arrow icon">
+        </div>
+        <div data-tab-content>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+          </p>
+        </div>
+      </li>
+      <li class="accordion__item" data-accordion-item>
+        <div class="accordion__title">
+          <span>How can I request a new browser?</span>
+          <img src="img/icon-arrow.svg" alt="Arrow icon">
+        </div>
+        <div data-tab-content>
+          <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          </p>
+        </div>
+      </li>
+      <li class="accordion__item" data-accordion-item>
+        <div class="accordion__title">
+          <span>Is there a mobile app?</span>
+          <img src="img/icon-arrow.svg" alt="Arrow icon">
+        </div>
+        <div data-tab-content>
+          <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+            sollicitudin ex et ultricies bibendum.
+          </p>
+        </div>
+      </li>
+      <li class="accordion__item" data-accordion-item>
+        <div class="accordion__title">
+          <span>What about other Chromium browsers?</span>
+          <img src="img/icon-arrow.svg" alt="Arrow icon">
+        </div>
+        <div data-tab-content>
+          <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+            vitae neque eget nisl gravida pellentesque non ut velit.
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="accordion__button">
+      <custom-button text="More Info"/>
+    </div>
+  </div>
 </main>
+
+<div class="newsletter">
+  <div class="newsletter__wrapper">
+    <p>35,000+ already joined</p>
+    <h2>Stay up-to-date with what we’re doing</h2>
+    <div class="newsletter__subscribe">
+      <input type="text">
+      <a href="#" class="newsletter__button">
+        <custom-button text="Contact Us"/>
+      </a>
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="footer__container">
