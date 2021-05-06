@@ -7,7 +7,6 @@ BUTTON_TEMPLATE.innerHTML = `
       border: 1px solid transparent;
       border-radius: 5px;
       cursor: pointer;
-      text-transform: uppercase;
       -webkit-box-shadow: 0 5px 5px -4px rgba(37,43,70,0.5); 
       box-shadow: 0 5px 5px -4px rgba(37,43,70,0.5);
     }
@@ -22,7 +21,13 @@ BUTTON_TEMPLATE.innerHTML = `
     }
     
     :host-context(.header__container) .btn__text { 
+      text-transform: uppercase;
       padding: 10px 20px;
+    }
+    
+    :host-context(.hero-block__light-button) .btn {
+      background-color: #f7f7f7;
+      color: hsl(229, 31%, 21%);
     }
   </style>
   
