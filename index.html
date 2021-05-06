@@ -7,41 +7,129 @@
   <title>Frontend Mentor | Bookmark landing page</title>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/index.js"></script>
   <script defer src="js/components/navBar.js"></script>
   <script defer src="js/components/button.js"></script>
+  <script defer src="js/components/contentRow.js"></script>
+  <script defer src="js/components/textBlock.js"></script>
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__container">
-      <div class="header__container__nav-bar-component">
-        <nav-bar logo="img/logo-bookmark-dark.svg"/>
+<header class="header">
+  <div class="header__container">
+    <div class="header__nav-bar-component">
+      <nav-bar logo="img/logo-bookmark-dark.svg"/>
+    </div>
+    <a href="#">
+      <custom-button text="Login"/>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="hero-block">
+    <div class="hero-block__wrapper">
+      <h1>A Simple Bookmark Manager</h1>
+      <p>
+        A clean and simple interface to organize your favourite websites. Open a new
+        browser tab and see your sites load instantly. Try it for free.
+      </p>
+      <div class="hero-block__buttons-group">
+        <div>
+          <a href="#">
+            <custom-button text="Get it on Chrome"/>
+          </a>
+        </div>
+        <div class="hero-block__light-button">
+          <a href="#">
+            <custom-button text="Get it on Firefox"/>
+          </a>
+        </div>
       </div>
-      <a href="#" class="header__container__button">
-        <custom-button text="Login" />
+    </div>
+    <img src="img/illustration-hero.svg" alt="A Simple Bookmark Manager">
+  </div>
+  <div class="features text-block-center">
+    <text-block heading="Features"
+                paragraph="Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."/>
+  </div>
+
+  <div class="tabs">
+    <ul class="tabs__list">
+      <li class="tabs__item tabs__item--active" data-tab-target="#simple-bookmarking" >
+        Simple Bookmarking
+      </li>
+      <li class="tabs__item" data-tab-target="#speedy-searching" >
+        Speedy Searching
+      </li>
+      <li class="tabs__item" data-tab-target="#easy-sharing" >
+        Easy Sharing
+      </li>
+    </ul>
+  </div>
+
+  <div id="simple-bookmarking" class="tab-simple-bookmarking tab-content active" data-tab-content>
+    <img src="img/illustration-features-tab-1.svg" alt="Simple Bookmarking">
+    <div class="tab-simple-bookmarking__wrapper">
+      <div class="tab-simple-bookmarking__text-block tab--text-block-left">
+        <text-block heading="Bookmark in one click"
+                    paragraph="Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites."/>
+      </div>
+      <div class="tab-simple-bookmarking__button">
+        <a href="#">
+          <custom-button text="More Info"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="speedy-searching" class="tab-speedy-searching tab-content" data-tab-content>
+    <img src="img/illustration-features-tab-2.svg" alt="Speedy Searching">
+    <div class="tab-speedy-searching__wrapper">
+      <div class="tab-speedy-searching__text-block tab--text-block-left">
+        <text-block heading="Intelligent search"
+                    paragraph="Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks."/>
+      </div>
+      <div class="tab-speedy-searching__button">
+        <a href="#">
+          <custom-button text="More Info"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="easy-sharing" class="tab-easy-sharing tab-content" data-tab-content>
+    <img src="img/illustration-features-tab-3.svg" alt="Easy Sharing">
+    <div class="tab-easy-sharing__wrapper">
+      <div class="tab-easy-sharing__text-block tab--text-block-left">
+        <text-block heading="Share your bookmarks"
+                    paragraph="Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."/>
+      </div>
+      <div class="tab-easy-sharing__button">
+        <a href="#">
+          <custom-button text="More Info"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__nav-bar-component">
+      <nav-bar logo="img/logo-bookmark-light.svg"/>
+    </div>
+
+    <div class="footer__social-links">
+      <a href="#">
+        <img src="img/icon-facebook.svg" alt="Facebook">
+      </a>
+      <a href="#">
+        <img src="img/icon-twitter.svg" alt="twitter">
       </a>
     </div>
-  </header>
-
-  <main>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__container__nav-bar-component">
-        <nav-bar logo="img/logo-bookmark-light.svg"/>
-      </div>
-
-      <div class="footer__container__social-links">
-        <a href="#">
-          <img src="img/icon-facebook.svg" alt="Facebook">
-        </a>
-        <a href="#">
-          <img src="img/icon-twitter.svg" alt="twitter">
-        </a>
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
 </body>
 
 </html>
