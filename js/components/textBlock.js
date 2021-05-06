@@ -19,6 +19,12 @@ TEXT_BLOCK_TEMPLATE.innerHTML = `
     :host-context(.tab--text-block-left) {
       text-align: left;
     }
+    
+    @media (max-width: 900px) {
+      :host-context(.tab--text-block-left) {
+        text-align: center;
+      }
+    }
 
   </style>
   

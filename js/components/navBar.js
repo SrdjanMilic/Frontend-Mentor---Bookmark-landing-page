@@ -13,6 +13,9 @@ NAV_BAR_TEMPLATE.innerHTML = `
     }
     
     :host-context(.header) a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       color: #252b46;
     }
     
@@ -26,6 +29,7 @@ NAV_BAR_TEMPLATE.innerHTML = `
     
     :host-context(.footer__nav-bar-component) .nav-bar__list {
       margin-left: 2.7rem;
+      padding: 0;
     }
     
     .nav-bar__logo {
@@ -36,6 +40,30 @@ NAV_BAR_TEMPLATE.innerHTML = `
     .nav-bar__item {
       display: inline-block;
       margin-right: 2.7rem;
+    }
+    
+   
+    @media (max-width: 900px) {
+      :host-context(.header) .nav-bar__list {
+        display: none;
+      }
+
+      :host-context(.footer) {
+        display: block;
+        justify-content: unset;
+        align-items: unset;
+      }
+      
+      :host-context(.footer__nav-bar-component) .nav-bar__list {
+        margin-left: 0;
+        padding: 10px 0;
+      }
+      
+      .nav-bar__item {
+        display: block;
+        margin: 1.6rem 0;
+      }
+
     }
   </style>
 
