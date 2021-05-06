@@ -11,18 +11,21 @@
 // .........
 
 // Neutral Colors
-$grayish-blue: hsl(229, 8%, 60%);
+$grayish-blue: hsl(229, 27%, 84%);
 $very-dark-blue: hsl(229, 31%, 21%);
 
 // Primary Colors
 $soft-blue: hsl(231, 69%, 60%);
 $soft-red:  hsl(0, 94%, 66%);
 
+// Element Colors
+$paragraph-color: hsl(229, 8%, 60%);
+
 // 2. Breakpoints
 // ..............
 
 $small: 375px;
-$xxlarge: 1440px;
+$xxlarge: 1200px;
 
 // 3. Fonts
 // ........
