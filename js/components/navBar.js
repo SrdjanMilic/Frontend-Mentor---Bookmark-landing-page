@@ -24,7 +24,7 @@ NAV_BAR_TEMPLATE.innerHTML = `
       color: #fff;
     }
     
-    :host-context(.footer__container__nav-bar-component) .nav-bar__list {
+    :host-context(.footer__nav-bar-component) .nav-bar__list {
       margin-left: 2.7rem;
     }
     
