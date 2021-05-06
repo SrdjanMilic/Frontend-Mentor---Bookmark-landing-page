@@ -58,7 +58,7 @@ select {
 .footer__container {
   justify-content: space-between; }
 
-.footer__container__social-links {
+.footer__social-links {
   display: flex;
   align-items: center;
   gap: 3rem; }
@@ -78,11 +78,91 @@ footer {
 .footer__container {
   display: flex;
   align-items: center;
-  width: 1440px;
-  max-width: 1440px;
+  width: 1200px;
+  max-width: 1200px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 13px; }
 
-.header__container__nav-bar-component {
+main .hero-block {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; }
+  main .hero-block h1 {
+    margin: 0 0 2rem;
+    font-size: 2.8em;
+    font-weight: 500;
+    line-height: 1.2; }
+  main .hero-block p {
+    color: #9194a1; }
+  main .hero-block__wrapper {
+    max-width: 485px; }
+  main .hero-block img {
+    justify-self: end; }
+  main .hero-block__buttons-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem; }
+
+main .features {
+  margin-top: 6em; }
+
+main .tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5em; }
+  main .tabs__list {
+    display: flex;
+    border-bottom: 1px solid #dbdfef;
+    list-style-type: none;
+    padding-left: 0;
+    width: max-content; }
+  main .tabs__item {
+    border-bottom: 4px solid transparent;
+    width: 250px;
+    text-align: center;
+    display: block;
+    padding: 25px 0;
+    font-size: 16px;
+    color: #252b46;
+    cursor: pointer; }
+  main .tabs__item--active {
+    border-bottom: 4px solid #fa5757; }
+
+main .tab-simple-bookmarking,
+main .tab-speedy-searching,
+main .tab-easy-sharing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 3em auto;
+  max-width: 1200px; }
+  main .tab-simple-bookmarking__wrapper,
+  main .tab-speedy-searching__wrapper,
+  main .tab-easy-sharing__wrapper {
+    justify-self: flex-end; }
+  main .tab-simple-bookmarking__text-block,
+  main .tab-speedy-searching__text-block,
+  main .tab-easy-sharing__text-block {
+    max-width: 450px; }
+    main .tab-simple-bookmarking__text-block p,
+    main .tab-speedy-searching__text-block p,
+    main .tab-easy-sharing__text-block p {
+      color: #9194a1; }
+  main .tab-simple-bookmarking__button,
+  main .tab-speedy-searching__button,
+  main .tab-easy-sharing__button {
+    margin-top: 2rem; }
+
+main [data-tab-content] {
+  display: none; }
+
+main .active[data-tab-content] {
+  display: grid; }
+
+.header__nav-bar-component {
   width: 100%; }
