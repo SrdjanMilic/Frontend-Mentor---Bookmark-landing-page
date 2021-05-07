@@ -1,13 +1,29 @@
 .footer {
   background-color: $very-dark-blue;
+
+  &__container {
+    justify-content: space-between;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
 }
 
-.footer__container {
-  justify-content: space-between;
-}
+@media (max-width: 900px) {
+  .footer {
+    display: block;
+    text-align: center;
+    padding: 3rem 0;
 
-.footer__social-links {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
+    &__container {
+      display: block;
+    }
+
+    &__social-links {
+      justify-content: center;
+    }
+  }
 }
