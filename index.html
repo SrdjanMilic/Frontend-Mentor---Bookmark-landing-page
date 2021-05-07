@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/index.js"></script>
   <script defer src="js/components/navBar.js"></script>
-  <script defer src="js/components/button.js"></script>
+  <script defer src="js/components/custom-button.js"></script>
   <script defer src="js/components/textBlock.js"></script>
 </head>
 
@@ -155,58 +155,44 @@
   </div>
 
   <div class="accordion">
-    <ul class="accordion__list">
-      <li class="accordion__item" data-accordion-target="#what-is-bookmark">
-        <div class="accordion__title">
-          <span>What is Bookmark?</span>
-          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
-        </div>
-        <div id="what-is-bookmark" data-accordion-content>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-          </p>
-        </div>
-      </li>
+    <div class="accordion__title">
+      What is Bookmark?
+    </div>
+    <div class="accordion__content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+        justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+      </p>
+    </div>
 
-      <li class="accordion__item" data-accordion-target="#request-browser">
-        <div class="accordion__title">
-          <span>How can I request a new browser?</span>
-          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
-        </div>
-        <div id="request-browser" data-accordion-content>
-          <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-          </p>
-        </div>
-      </li>
+    <div class="accordion__title">
+      How can I request a new browser?
+    </div>
+    <div class="accordion__content">
+      <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+        Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+        ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+      </p>
+    </div>
 
-      <li class="accordion__item" data-accordion-target="#mobile-app">
-        <div class="accordion__title">
-          <span>Is there a mobile app?</span>
-          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
-        </div>
-        <div id="mobile-app" data-accordion-content>
-          <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
-            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
-            sollicitudin ex et ultricies bibendum.
-          </p>
-        </div>
-      </li>
+    <div class="accordion__title">
+      Is there a mobile app?
+    </div>
+    <div class="accordion__content">
+      <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+        urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+        sollicitudin ex et ultricies bibendum.
+      </p>
+    </div>
 
-      <li class="accordion__item" data-accordion-target="#other-browsers">
-        <div class="accordion__title">
-          <span>What about other Chromium browsers?</span>
-          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
-        </div>
-        <div id="other-browsers" data-accordion-content>
-          <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
-            vitae neque eget nisl gravida pellentesque non ut velit.
-          </p>
-        </div>
-      </li>
-    </ul>
+    <div class="accordion__title">
+      What about other Chromium browsers?
+    </div>
+    <div class="accordion__content accordion__last-content">
+      <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+        vitae neque eget nisl gravida pellentesque non ut velit.
+      </p>
+    </div>
 
     <div class="accordion__button">
       <custom-button text="More Info"/>
