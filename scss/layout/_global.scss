@@ -269,6 +269,10 @@ main {
   .footer__container {
     width: 100%;
   }
+
+  .footer__container {
+    display: block;
+  }
 }
 
 @media (max-width: 900px) {
