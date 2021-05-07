@@ -10,7 +10,6 @@
   <script defer src="js/index.js"></script>
   <script defer src="js/components/navBar.js"></script>
   <script defer src="js/components/button.js"></script>
-  <script defer src="js/components/contentRow.js"></script>
   <script defer src="js/components/textBlock.js"></script>
 </head>
 
@@ -156,24 +155,25 @@
   </div>
 
   <div class="accordion">
-    <ul class="accordion__list" data-accordion>
-      <li class="accordion__item" data-accordion-item>
+    <ul class="accordion__list">
+      <li class="accordion__item" data-accordion-target="#what-is-bookmark">
         <div class="accordion__title">
           <span>What is Bookmark?</span>
-          <img src="img/icon-arrow.svg" alt="Arrow icon">
+          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
         </div>
-        <div data-tab-content>
+        <div id="what-is-bookmark" data-accordion-content>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
             justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
           </p>
         </div>
       </li>
-      <li class="accordion__item" data-accordion-item>
+
+      <li class="accordion__item" data-accordion-target="#request-browser">
         <div class="accordion__title">
           <span>How can I request a new browser?</span>
-          <img src="img/icon-arrow.svg" alt="Arrow icon">
+          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
         </div>
-        <div data-tab-content>
+        <div id="request-browser" data-accordion-content>
           <p>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
             Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
             ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
@@ -181,24 +181,26 @@
           </p>
         </div>
       </li>
-      <li class="accordion__item" data-accordion-item>
+
+      <li class="accordion__item" data-accordion-target="#mobile-app">
         <div class="accordion__title">
           <span>Is there a mobile app?</span>
-          <img src="img/icon-arrow.svg" alt="Arrow icon">
+          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
         </div>
-        <div data-tab-content>
+        <div id="mobile-app" data-accordion-content>
           <p>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
             urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
             sollicitudin ex et ultricies bibendum.
           </p>
         </div>
       </li>
-      <li class="accordion__item" data-accordion-item>
+
+      <li class="accordion__item" data-accordion-target="#other-browsers">
         <div class="accordion__title">
           <span>What about other Chromium browsers?</span>
-          <img src="img/icon-arrow.svg" alt="Arrow icon">
+          <img class="accordion__arrow-icon" src="img/icon-arrow.svg" alt="Arrow icon">
         </div>
-        <div data-tab-content>
+        <div id="other-browsers" data-accordion-content>
           <p>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
             vitae neque eget nisl gravida pellentesque non ut velit.
           </p>
