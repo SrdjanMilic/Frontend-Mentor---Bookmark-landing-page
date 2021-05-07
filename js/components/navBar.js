@@ -12,6 +12,11 @@ NAV_BAR_TEMPLATE.innerHTML = `
       align-items: center;
     }
     
+    :host .nav-bar__item a {
+      color: #5368df;
+      text-decoration: none;
+    }
+    
     :host-context(.header) a {
       display: flex;
       justify-content: space-between;
