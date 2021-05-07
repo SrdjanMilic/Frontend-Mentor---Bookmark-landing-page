@@ -269,7 +269,9 @@ main .accordion {
     padding-right: 20px; }
   .header__container,
   .footer__container {
-    width: 100%; } }
+    width: 100%; }
+  .footer__container {
+    display: block; } }
 
 @media (max-width: 900px) {
   main .hero-block {
