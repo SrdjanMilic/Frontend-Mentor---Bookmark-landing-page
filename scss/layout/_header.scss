@@ -1,3 +1,21 @@
-.header__nav-bar-component {
-  width: 100%;
+.header {
+  &__nav-bar-component {
+    width: 100%;
+  }
+
+  &__hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__container a {
+      display: none;
+    }
+
+    &__hamburger-menu {
+      display: block;
+    }
+  }
 }
