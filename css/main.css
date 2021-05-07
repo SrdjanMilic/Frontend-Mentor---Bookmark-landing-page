@@ -67,7 +67,8 @@ select {
     text-align: center;
     padding: 3rem 0; }
     .footer__container {
-      display: block; }
+      display: flex;
+      flex-direction: column; }
     .footer__social-links {
       justify-content: center; } }
 
@@ -272,9 +273,7 @@ main .accordion {
     padding-right: 20px; }
   .header__container,
   .footer__container {
-    width: 100%; }
-  .footer__container {
-    display: block; } }
+    width: 100%; } }
 
 @media (max-width: 900px) {
   .header__hamburger-icon {
