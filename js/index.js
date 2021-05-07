@@ -1,3 +1,4 @@
+// Tabs
 const tabs = document.querySelectorAll('[data-tab-target]');
 const tabContents = document.querySelectorAll('[data-tab-content]');
 
@@ -18,6 +19,7 @@ tabs.forEach(tab => {
   });
 });
 
+// Accordion
 const accordionTitle = document.getElementsByClassName('accordion__title');
 
 for (let i = 0; i < accordionTitle.length; i++) {
@@ -33,3 +35,28 @@ for (let i = 0; i < accordionTitle.length; i++) {
     }
   });
 }
+
+// Overlay menu
+const hamburgerIcon = document.querySelector('.header__hamburger-icon');
+const sideBar = document.querySelector('.header__sidebar');
+const closeSidebar = document.querySelector('.header__sidebar-close');
+
+function toggleSideBar() {
+  sideBar.classList.toggle('active');
+  closeSidebar.classList.toggle('animation');
+  if (sideBar.classList.contains('active')) {
+    hamburgerIcon.style.display = 'none';
+  } else {
+    hamburgerIcon.style.display = 'block';
+  }
+}
+
+hamburgerIcon.addEventListener('click', () => {
+  toggleSideBar();
+  hamburgerIcon.style.display = 'none';
+});
+
+closeSidebar.addEventListener('click', () => {
+  toggleSideBar();
+  hamburgerIcon.style.display = 'block';
+});
