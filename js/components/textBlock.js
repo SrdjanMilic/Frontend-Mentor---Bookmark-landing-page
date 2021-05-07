@@ -8,16 +8,32 @@ TEXT_BLOCK_TEMPLATE.innerHTML = `
     
     :host p {
       max-width: 530px;
-      margin: auto;
+      // margin: auto;
       color: hsl(229, 8%, 60%);
     }
     
     :host-context(.text-block-center) {
       text-align: center;
     }
+    
+    :host-context(.text-block-center) p {
+      margin: auto;
+    }
         
     :host-context(.tab--text-block-left) {
       text-align: left;
+    }
+    
+   :host-context(.text-block-right) {
+      text-align: right;
+    }
+    
+   :host-context(.text-block-right) h2 {
+      color: #5368df;
+    }
+    
+   :host-context(.text-block-right) p {
+      color: #5368df;
     }
     
     @media (max-width: 900px) {
@@ -25,7 +41,6 @@ TEXT_BLOCK_TEMPLATE.innerHTML = `
         text-align: center;
       }
     }
-
   </style>
   
   <h2></h2>
