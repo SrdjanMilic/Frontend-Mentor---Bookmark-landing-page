@@ -21,6 +21,10 @@ footer {
   font-size: 13px;
 }
 
+.header__hamburger-icon {
+  display: none;
+}
+
 main {
   .hero-block {
     max-width: $xxlarge;
@@ -276,6 +280,11 @@ main {
 }
 
 @media (max-width: 900px) {
+  .header__hamburger-icon {
+    display: block;
+    height: 15px;
+  }
+
   main {
     .hero-block {
       grid-template-columns: 1fr;
