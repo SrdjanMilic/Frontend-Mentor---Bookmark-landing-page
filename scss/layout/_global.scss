@@ -127,14 +127,19 @@ main {
     }
   }
 
-  [data-tab-content] {
+  [data-tab-content],
+  [data-accordion-content] {
     display: none;
   }
 
   .active[data-tab-content] {
     display: grid;
   }
-  
+
+  .active[data-accordion-content] {
+    display: block;
+  }
+
   .cards {
     display: flex;
     justify-content: center;
@@ -192,12 +197,30 @@ main {
       &:last-of-type {
         border-bottom: 1px solid #dbdfef;
       }
+
+      p {
+        color: #9194a1;
+      }
+    }
+
+    &__item--active {
+      span {
+        font-weight: 500;
+      }
     }
 
     &__title {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &__arrow-icon {
+      cursor: pointer;
+    }
+
+    .arrow-active {
+      transform: rotate(180deg);
     }
 
     &__button {
