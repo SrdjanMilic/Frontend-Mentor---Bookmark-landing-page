@@ -27,7 +27,10 @@ BUTTON_TEMPLATE.innerHTML = `
 
     :host(.light-background) .btn:hover,
     :host(.light-background) .btn:active,
-    :host(.light-background) .btn:focus {
+    :host(.light-background) .btn:focus,
+    :host(.custom-button-2) .btn:hover,
+    :host(.custom-button-2) .btn:active,
+    :host(.custom-button-2) .btn:focus {
       background-color: #fff;
       border: 2px solid #252b46;
       color: #252b46;
