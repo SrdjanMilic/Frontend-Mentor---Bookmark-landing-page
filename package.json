@@ -4,7 +4,7 @@
   "description": "![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "directories": {
-    "doc": "doc"
+    "doc": "docs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
