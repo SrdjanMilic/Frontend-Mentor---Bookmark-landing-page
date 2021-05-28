@@ -1,6 +1,6 @@
 # Frontend Mentor - Bookmark landing page
 
-![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Bookmark landing page coding challenge](./docs/design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -30,6 +30,12 @@ For this challenge you'll need to:
 - Change the `fill` and `stroke` color of the SVGs at specific points (the challenge can be completed using the single `logo-bookmark.svg` file provided)
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+
+## Additional tasks (Company requirements)
+
+- Create responsive templates, guided with reusable components principles
+- Use BEM methodology, SCSS and Vanilla JS
+- Create new page displaying how created components can be customized
 
 ## Where to find everything
 
