@@ -1,97 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Frontend Mentor | Bookmark landing page</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
+  <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="css/main.css" rel="stylesheet">
   <script defer src="js/components/navBar.js"></script>
   <script defer src="js/components/custom-button.js"></script>
   <script defer src="js/components/textBlock.js"></script>
 </head>
-<style>
-    body {
-        padding: 25px;
-    }
 
-    .divider {
-        margin: 35px;
-    }
-
-    .text-block-right {
-        max-width: 530px;
-    }
-
-    .text-custom-2-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-</style>
 <body>
-<h1>Page Components</h1>
+  <div class="container">
+    <h1>Page Components</h1>
+    <p>Brief introduction of what you can do with integrated web components.</p>
 
-<div class="divider"></div>
-<hr>
+    <div class="divider"></div>
+    <hr>
 
-<h2>Navbars</h2>
-<div class="nav-bar-components nav-bar-default">
-  <nav-bar logo="img/logo-bookmark-dark.svg"/>
-</div>
+    <h2>Navbars</h2>
+    <div class="nav-bar-components nav-bar-default">
+      <nav-bar logo="img/logo-bookmark-dark.svg"/>
+    </div>
 
-<div class="divider"></div>
+    <div class="divider"></div>
 
-<div class="nav-bar-components nav-bar-custom-1">
-  <nav-bar logo="img/logo-bookmark-light.svg"/>
-</div>
+    <div class="nav-bar-components nav-bar-custom-1">
+      <nav-bar class="justify-unset white-fonts dark-background custom-logo" logo="img/logo-bookmark-light.svg"/>
+    </div>
 
-<div class="divider"></div>
+    <div class="divider"></div>
 
-<div class="nav-bar-components nav-bar-custom-2">
-  <nav-bar logo="img/logo-bookmark-dark.svg"/>
-</div>
+    <div class="nav-bar-components nav-bar-custom-2">
+      <nav-bar class="justify-center light-background" logo="img/logo-bookmark-dark.svg"/>
+    </div>
 
-<div class="divider"></div>
-<hr>
+    <div class="divider"></div>
+    <hr>
 
-<h2>Text Blocks</h2>
-<div class="text-block text-block-default text-block-left">
-  <text-block heading="Default Component"
-              paragraph="This is a default component. There are 'nav-bar' and 'button' components on this page as as well"/>
-</div>
-<div class="divider"></div>
-<div class="text-block text-block-center">
-  <text-block heading="Custom 1"
-              paragraph="This is a custom-1 component. There are 'nav-bar' and 'button' components on this page as as well"/>
-</div>
-<div class="divider"></div>
-<div class="text-custom-2-wrapper">
-  <div class="text-block text-block-right">
-    <text-block heading="Custom 2"
-                paragraph="This is a custom-2 component. There are 'nav-bar' and 'button' components on this page as as well"/>
+    <h2>Text Blocks</h2>
+    <div class="text-block">
+      <text-block heading="Default"
+                  paragraph="This is a custom-1 component. There are 'nav-bar' and 'button' components on this page as as well"/>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="text-block">
+      <text-block class="align-left block-left"
+                  heading="Custom 1"
+                  paragraph="This is a default component. There are 'nav-bar' and 'button' components on this page as as well"
+      />
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="text-custom-2-wrapper">
+      <div class="text-block text-block-right">
+        <text-block class="align-right block-right"
+                    heading="Custom 2"
+                    paragraph="This is a custom-2 component. There are 'nav-bar' and 'button' components on this page as as well"
+        />
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <hr>
+
+    <h2>Custom Buttons</h2>
+    <div class="custom-button">
+      <custom-button text="Default"/>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <custom-button class="custom-button-1" text="Custom 1"/>
+    </div>
+
+    <div class="divider"></div>
+
+    <div>
+      <custom-button class="custom-button-2" text="Custom 2"/>
+    </div>
   </div>
-</div>
-
-<div class="divider"></div>
-<hr>
-
-<h2>Custom Buttons</h2>
-<div class="custom-button">
-  <custom-button text="Default"/>
-</div>
-
-<div class="divider"></div>
-
-<div class="custom-button-1">
-  <custom-button text="Custom 1"/>
-</div>
-
-<div class="divider"></div>
-
-<div class="custom-button-2">
-  <custom-button text="Custom 2"/>
-</div>
 </body>
 </html>
