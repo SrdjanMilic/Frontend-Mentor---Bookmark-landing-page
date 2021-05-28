@@ -1,6 +1,10 @@
 const TEXT_BLOCK_TEMPLATE = document.createElement('template');
 TEXT_BLOCK_TEMPLATE.innerHTML = `
   <style>
+    :host {
+      text-align: center;
+    }
+    
     :host h2 {
       font-size: 1.9em;
       font-weight: 500;
@@ -12,44 +16,36 @@ TEXT_BLOCK_TEMPLATE.innerHTML = `
       color: hsl(229, 8%, 60%);
     }
     
-    :host-context(.text-block-center) {
-      text-align: center;
+    :host(.align-left) {
+      text-align: left;
     }
     
-    :host {
-      text-align: center;
+    :host(.align-right) {
+      text-align: right;
     }
      
-    :host-context(.text-block-center) p {
+    :host(.block-center) p {
       margin: auto;
     }
-        
-    :host-context(.tab--text-block-left) {
-      text-align: left;
-    }
     
-    :host-context(.text-block-default) {
-      text-align: left;
-    }
-    
-    :host-context(.text-block-default) p {
+    :host(.block-left) p {
       margin: 0;
     }
     
-   :host-context(.text-block-right) {
-      text-align: right;
-    }
-    
-   :host-context(.text-block-right) h2 {
+   :host(.heading-blue) h2 {
       color: #5368df;
     }
     
-   :host-context(.text-block-right) p {
+   :host(.paragraph-blue) p {
       color: #5368df;
+    }
+    
+    :host(.tabs--text) h2 {
+      margin-top: 0;
     }
     
     @media (max-width: 900px) {
-      :host-context(.tab--text-block-left) {
+      :host(.tabs--text) {
         text-align: center;
       }
     }
@@ -59,11 +55,15 @@ TEXT_BLOCK_TEMPLATE.innerHTML = `
   <p></p>
 `;
 
-class TextBlock extends HTMLElement {
+class TextBlock extends HTMLParagraphElement {
+  // initialize object
   constructor() {
+    // "super" keyword for overriding (extend) a parent class method
     super();
 
-    this.attachShadow({ mode: 'open' });
+    // Create a shadow root
+    this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
+    // attach the created elements to the shadow DOM
     this.shadowRoot.appendChild(TEXT_BLOCK_TEMPLATE.content.cloneNode(true));
 
     this.shadowRoot.querySelector('h2').innerText = this.getAttribute('heading');
@@ -71,4 +71,5 @@ class TextBlock extends HTMLElement {
   }
 }
 
-window.customElements.define('text-block', TextBlock);
+// register the element
+window.customElements.define('text-block', TextBlock, { extends: 'p' });

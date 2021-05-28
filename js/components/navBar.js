@@ -1,8 +1,7 @@
 const NAV_BAR_TEMPLATE = document.createElement('template');
 NAV_BAR_TEMPLATE.innerHTML = `
   <style>
-    a,
-    a:-webkit-any-link {
+    a {
       text-decoration: none;
     }
     
@@ -12,68 +11,62 @@ NAV_BAR_TEMPLATE.innerHTML = `
       align-items: center;
     }
     
-    :host .nav-bar__item a {
-      color: #5368df;
+    :host a {
       text-decoration: none;
-    }
-    
-    :host-context(.header) a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    :host-context(.header) .nav-bar__item a {
       color: #252b46;
+      transition: color .3s;
     }
     
-    :host-context(.nav-bar-components) .nav-bar__item a {
-      color: #252b46;
+    :host a:hover,
+    :host a:focus,
+    :host a:active {
+      color: #fa5757;
     }
     
-    :host-context(.nav-bar-custom-1) {
-      justify-content: unset;
-    }
-    
-    :host-context(.nav-bar-custom-1) .nav-bar__item a {
+    :host(.white-fonts) a {
       color: #fff;
     }
     
-    :host-context(.nav-bar-custom-2) {
-      background-color: aliceblue;
-      justify-content: center;
+    :host(.white-fonts) a:hover,
+    :host(.white-fonts) a:active,
+    :host(.white-fonts) a:focus {
+      color: #fa5757;
     }
     
-    :host-context(.nav-bar-custom-2) .nav-bar__logo {
-      margin-left: 15px;
-    }
-    
-    :host-context(.footer) {
+    :host(.justify-left) {
       justify-content: left;
     }
     
-    :host-context(.footer) a {
+    :host(.justify-center) {
+      justify-content: center;
+    }
+    
+    :host(.justify-unset) {
+      justify-content: unset;
+    }
+    
+    :host(.white-fonts) a {
       color: #fff;
     }
-    
-    :host-context(.footer__nav-bar-component) .nav-bar__list {
-      margin-left: 2.7rem;
-      padding: 0;
+
+    :host(.dark-background) {
+      background-color: #252b46;
     }
     
-    :host-context(.nav-bar-custom-1) .nav-bar__logo {
+    :host(.light-background) {
+      background-color: aliceblue;
+    }
+        
+    :host(.custom-logo) .nav-bar__logo {
       width: 220px;
       height: auto;
       margin-left: 20px;
     }
-
-    :host-context(.nav-bar-custom-1) {
-      background-color: #252b46;
-    }
-
+    
     .nav-bar__logo {
       width: 148px;
-      height: 25px;
+      height: auto;
+      display: block;
     }
     
     .nav-bar__item {
@@ -82,17 +75,17 @@ NAV_BAR_TEMPLATE.innerHTML = `
     }
        
     @media (max-width: 900px) {
-      :host-context(.header) .nav-bar__list {
+      :host(.header--nav-bar) .nav-bar__list {
         display: none;
       }
 
-      :host-context(.footer) {
+      :host(.footer--nav-bar) {
         display: block;
         justify-content: unset;
         align-items: unset;
       }
       
-      :host-context(.footer__nav-bar-component) .nav-bar__list {
+      :host(.footer--nav-bar) .nav-bar__list {
         margin-left: 0;
         padding: 10px 0;
       }
@@ -124,15 +117,20 @@ NAV_BAR_TEMPLATE.innerHTML = `
   </ul>
 `;
 
-class NavBar extends HTMLElement {
+class NavBar extends HTMLUListElement {
+  // initialize object
   constructor() {
+    // "super" keyword for overriding (extend) a parent class method
     super();
 
-    this.attachShadow({ mode: 'open' });
+    // Create a shadow root
+    this.attachShadow({mode: 'open'}); // sets and returns 'this.shadowRoot'
+    // attach the created elements to the shadow DOM
     this.shadowRoot.appendChild(NAV_BAR_TEMPLATE.content.cloneNode(true));
 
     this.shadowRoot.querySelector('.nav-bar__logo').src = this.getAttribute('logo');
   }
 }
 
-window.customElements.define('nav-bar', NavBar);
+// register the element (define a new custom element)
+window.customElements.define('nav-bar', NavBar, { extends: 'ul' });

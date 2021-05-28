@@ -18,10 +18,10 @@
 <header class="header">
   <div class="header__container">
     <div class="header__nav-bar-component">
-      <nav-bar logo="img/logo-bookmark-dark.svg"/>
+      <nav-bar logo="img/logo-bookmark-dark.svg" class="header--nav-bar"/>
     </div>
     <a href="#">
-      <custom-button text="Login"/>
+      <custom-button text="Login" class="header__button red-background"/>
     </a>
   </div>
 
@@ -54,7 +54,7 @@
         </div>
         <div class="hero-block__light-button">
           <a href="#">
-            <custom-button text="Get it on Firefox"/>
+            <custom-button text="Get it on Firefox" class="light-background"/>
           </a>
         </div>
       </div>
@@ -62,9 +62,11 @@
     <img src="img/illustration-hero.svg" alt="A Simple Bookmark Manager">
   </div>
 
-  <div class="text-block-features text-block-center">
+  <div class="text-block-features">
     <text-block heading="Features"
-                paragraph="Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."/>
+                paragraph="Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go."
+                class="align-center"
+    />
   </div>
 
   <div class="tabs">
@@ -84,9 +86,11 @@
   <div id="simple-bookmarking" class="tab-simple-bookmarking tab-content active" data-tab-content>
     <img src="img/illustration-features-tab-1.svg" alt="Simple Bookmarking">
     <div class="tab-simple-bookmarking__wrapper">
-      <div class="tab-simple-bookmarking__text-block tab--text-block-left">
+      <div class="tab-simple-bookmarking__text-block">
         <text-block heading="Bookmark in one click"
-                    paragraph="Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites."/>
+                    paragraph="Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites."
+                    class="tabs--text align-left"
+        />
       </div>
       <div class="tab-simple-bookmarking__button">
         <a href="#">
@@ -99,9 +103,11 @@
   <div id="speedy-searching" class="tab-speedy-searching tab-content" data-tab-content>
     <img src="img/illustration-features-tab-2.svg" alt="Speedy Searching">
     <div class="tab-speedy-searching__wrapper">
-      <div class="tab-speedy-searching__text-block tab--text-block-left">
+      <div class="tab-speedy-searching__text-block">
         <text-block heading="Intelligent search"
-                    paragraph="Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks."/>
+                    paragraph="Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks."
+                    class="tabs--text align-left"
+        />
       </div>
       <div class="tab-speedy-searching__button">
         <a href="#">
@@ -114,9 +120,11 @@
   <div id="easy-sharing" class="tab-easy-sharing tab-content" data-tab-content>
     <img src="img/illustration-features-tab-3.svg" alt="Easy Sharing">
     <div class="tab-easy-sharing__wrapper">
-      <div class="tab-easy-sharing__text-block tab--text-block-left">
+      <div class="tab-easy-sharing__text-block">
         <text-block heading="Share your bookmarks"
-                    paragraph="Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."/>
+                    paragraph="Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button."
+                    class="tabs--text align-left"
+        />
       </div>
       <div class="tab-easy-sharing__button">
         <a href="#">
@@ -163,7 +171,8 @@
 
   <div class="text-block-faq text-block-center">
     <text-block heading="Frequently Asked Questions"
-                paragraph="Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us."/>
+                paragraph="Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us."
+    />
   </div>
 
   <div class="accordion">
@@ -218,8 +227,8 @@
     <h2>Stay up-to-date with what we’re doing</h2>
     <div class="newsletter__subscribe">
       <input type="text">
-      <a href="#" class="newsletter__button">
-        <custom-button text="Contact Us"/>
+      <a href="#">
+        <custom-button text="Contact Us" class="red-background"/>
       </a>
     </div>
   </div>
@@ -228,7 +237,9 @@
 <footer class="footer">
   <div class="footer__container">
     <div class="footer__nav-bar-component">
-      <nav-bar logo="img/logo-bookmark-light.svg"/>
+      <nav-bar logo="img/logo-bookmark-light.svg"
+               class="footer--nav-bar justify-left white-fonts"
+      />
     </div>
 
     <div class="footer__social-links">
