@@ -24,14 +24,19 @@ const accordionTitle = document.getElementsByClassName('accordion__title');
 
 for (let i = 0; i < accordionTitle.length; i++) {
   accordionTitle[i].addEventListener('click', function() {
-    this.classList.toggle('arrow-active');
-    this.classList.toggle('accordion__title-bold');
     const accordionContent = this.nextElementSibling;
 
-    if (accordionContent.style.maxHeight) {
-      accordionContent.style.maxHeight = null;
-    } else {
+    this.classList.toggle('arrow-active');
+    this.classList.toggle('accordion__title-bold');
+
+    if (accordionContent.style.maxHeight === '') {
+      /***
+       The Element.scrollHeight read-only property is a measurement of the height of an element's content,
+       including content not visible on the screen due to overflow.
+       */
       accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+    } else {
+      accordionContent.style.maxHeight = null;
     }
   });
 }
@@ -53,10 +58,8 @@ function toggleSideBar() {
 
 hamburgerIcon.addEventListener('click', () => {
   toggleSideBar();
-  hamburgerIcon.style.display = 'none';
 });
 
 closeSidebar.addEventListener('click', () => {
   toggleSideBar();
-  hamburgerIcon.style.display = 'block';
 });
