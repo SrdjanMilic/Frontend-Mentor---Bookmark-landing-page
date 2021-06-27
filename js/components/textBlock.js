@@ -55,7 +55,7 @@ TEXT_BLOCK_TEMPLATE.innerHTML = `
   <p></p>
 `;
 
-class TextBlock extends HTMLParagraphElement {
+class TextBlock extends HTMLElement {
   // initialize object
   constructor() {
     // "super" keyword for overriding (extend) a parent class method
@@ -72,4 +72,4 @@ class TextBlock extends HTMLParagraphElement {
 }
 
 // register the element
-window.customElements.define('text-block', TextBlock, { extends: 'p' });
+window.customElements.define('text-block', TextBlock );

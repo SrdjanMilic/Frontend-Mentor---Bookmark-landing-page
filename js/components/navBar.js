@@ -117,7 +117,7 @@ NAV_BAR_TEMPLATE.innerHTML = `
   </ul>
 `;
 
-class NavBar extends HTMLUListElement {
+class NavBar extends HTMLElement {
   // initialize object
   constructor() {
     // "super" keyword for overriding (extend) a parent class method
@@ -133,4 +133,4 @@ class NavBar extends HTMLUListElement {
 }
 
 // register the element (define a new custom element)
-window.customElements.define('nav-bar', NavBar, { extends: 'ul' });
+window.customElements.define('nav-bar', NavBar );

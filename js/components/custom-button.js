@@ -86,7 +86,7 @@ BUTTON_TEMPLATE.innerHTML = `
   </button>
 `;
 
-class Button extends HTMLButtonElement {
+class Button extends HTMLElement {
   // initialize object
   constructor() {
     // "super" keyword for overriding (extend) a parent class method
@@ -102,4 +102,4 @@ class Button extends HTMLButtonElement {
 }
 
 // register the element
-window.customElements.define('custom-button', Button, { extends: 'button' });
+window.customElements.define('custom-button', Button );
